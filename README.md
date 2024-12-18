@@ -1,4 +1,4 @@
-# Frontend Mentor - Four Car Feature
+# Frontend Mentor - Four Card Feature
 
 ![Design preview for the four card feature coding challenge](./design/desktop-design.jpg)
 
