@@ -30,7 +30,8 @@ body {
 
 .content-wrapper {
   padding: 5.375rem 2rem 4.875rem;
-  border: 1px solid black;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header {
@@ -71,9 +72,11 @@ p {
 
 .card-container {
   display: grid;
-  /* grid-template-columns: 1fr; */
-  justify-content: center;
-  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 1.5rem;
 }
 
 .card-container > article:nth-child(1) {
@@ -99,7 +102,6 @@ p {
   padding: 1.75rem;
   border-radius: 0.5rem;
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-  min-width: 15.625rem;
   max-width: 21.875rem;
 }
 
@@ -114,4 +116,46 @@ p {
 
 .card > img {
   align-self: self-end;
+}
+
+@media screen and (min-width: 800px) {
+  h1,
+  header > h2 {
+    font-size: 2.25rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card > p {
+    margin-bottom: 2.5rem;
+  }
+
+  .card > img {
+    width: 64px;
+    height: auto;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+  }
+
+  .card1 {
+    grid-area: 2 / 1 / 4 / 1;
+  }
+
+  .card2 {
+    grid-area: 1 / 2 / 3 / 2;
+  }
+
+  .card3 {
+    grid-area: 3 / 2 / 5 / 2;
+  }
+
+  .card4 {
+    grid-area: 2 / 3 / 4 / 3;
+  }
 }
