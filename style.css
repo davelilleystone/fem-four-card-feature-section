@@ -58,7 +58,10 @@ header > h2 {
 
 header > P {
   margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 0.938rem;
+  max-width: 550px;
 }
 
 h1,
